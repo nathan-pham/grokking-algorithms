@@ -40,13 +40,13 @@ def classes_min(classes: Classes, last_time: int) -> Union[None, Class]:
         last_time (int): Last ending time in schedule
 
     Returns:
-        Union[None, Class]: minimum class (if found)
+        Union[None, Class]: Minimum class (if found)
     """
 
     min_class = None
 
     for c in classes:
-        # class must be as small as possible while starting later than the first class
+        # class must start as early as possible while starting later than the first class
         if c["start"] >= last_time and c["start"] <= (min_class or { "start": 24 })["start"]:
             min_class = c
     
@@ -82,4 +82,4 @@ def classroom_scheduling(classes: Classes) -> Classes:
 
     return schedule
 
-print([c["name"] for c in classroom_scheduling(classes)])
+print(classroom_scheduling(classes))

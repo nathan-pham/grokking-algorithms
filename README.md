@@ -4,5 +4,8 @@
 Implementation of the algorithms in the book "Grokking Algorithms"
 
 ## Algorithms
-
+8. Greedy Algorithms
+    - [Classroom Scheduling](/greedy_classroom_scheduling.py)
+    - [Knapsack](/greedy_knapsack.py)
+    
 10. [K-Nearest Neighbors](/knn_regression.py)
