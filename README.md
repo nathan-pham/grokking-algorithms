@@ -4,5 +4,4 @@
 Implementation of the algorithms in the book "Grokking Algorithms"
 
 ## Algorithms
-- [Binary Search](/binary_search.py)
-- [Selection Sort](/selection_sort.py)
+- [K-Nearest Neighbors](/knn.py)
