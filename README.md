@@ -4,4 +4,5 @@
 Implementation of the algorithms in the book "Grokking Algorithms"
 
 ## Algorithms
-- [K-Nearest Neighbors](/knn.py)
+
+10. [K-Nearest Neighbors](/knn_regression.py)

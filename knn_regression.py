@@ -1,5 +1,4 @@
 from __future__ import annotations
-from math import dist
 from typing import * 
 
 def read_csv(filename: str) -> Tuple[List[str], List[List[Any]]]:
@@ -31,7 +30,7 @@ def distance(a: List[int], b: List[int]) -> float:
     Returns:
         float: distance between vectors (or similarity between points)
     """
-    
+
     if len(a) != len(b):
         raise ValueError("length of vectors must be equal")
 
