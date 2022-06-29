@@ -19,6 +19,8 @@ Implementation of the algorithms in the book "Grokking Algorithms". Paired with 
 
 6. [Breadth-First Search](/breadth_first_search.py)
 
+7. [Dijkstra’s Algorithm](/dijkstras_algorithm.py)
+
 8. Greedy Algorithms
     - [Classroom Scheduling](/greedy_classroom_scheduling.py)
     - [Knapsack](/greedy_knapsack.py)

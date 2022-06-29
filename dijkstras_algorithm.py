@@ -8,6 +8,16 @@ GraphCost = Dict[str, float]
 GraphParents = Dict[str, Union[str, None]]
 
 def dijkstras_algorithm(graph: Graph, start: str = "A") -> Tuple[GraphCost, GraphParents]:
+    """Get the costs and parents of each node (so you can find the closest node later)
+
+    Args:
+        graph (Graph): Graph to process
+        start (str, optional): Starting node. Defaults to "A".
+
+    Returns:
+        Tuple[GraphCost, GraphParents]: Dict of node costs, Dict of nodes: parents
+    """
+
     unvisited = list(graph.keys())
     visited = [start]
 
@@ -47,14 +57,25 @@ def dijkstras_algorithm(graph: Graph, start: str = "A") -> Tuple[GraphCost, Grap
 
     return costs, parents
 
-def get_path(costs: GraphCost, parents: GraphParents, start: str) -> Tuple[str, List[str]]:
+def get_path(costs: GraphCost, parents: GraphParents, start: str = "") -> Tuple[str, List[str]]:
+    """Find the closest node to the starting node
+
+    Args:
+        costs (GraphCost): Dict of node costs
+        parents (GraphParents): Dict of nodes: parents
+        start (str): Starting node (if not supplied get_path might chose the starting node because the distance to itself is 0)
+
+    Returns:
+        Tuple[str, List[str]]: Closest node, path of nodes to closest node
+    """
+
     # get closest node (without A, which has a distance of 0)
     closest_node = min({ key: value for key, value in costs.items() if key != start })
 
     # find path from parents dict
     child: Union[None, str] = closest_node
     path = []
-    
+
     while child:
         path.append(child)
         child = parents.get(child)
